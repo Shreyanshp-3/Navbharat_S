@@ -1,90 +1,142 @@
 import React from 'react'
-import {Box,Text} from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import '../../index.css';
-
+import logo from './companylogo.png';
+import { Margin } from '@mui/icons-material';
 const Footer = () => {
   return (
     <Box
       w="100vw"
       ml={{ lg: "-5rem" }}
-      _hover={{
-        bg: "red.500",
-        color: "white",
-      }}
-      p={{ base: "1.3rem", md: "2.6rem",lg:'2.8rem' }}
+      p={{ base: "1.3rem", md: "2.6rem", lg: '2rem 2rem 1rem 2rem' }}
       display={'flex'}
       flexDir={'column'}
       gap='28px'
     >
       <Box
-        // w="100vw"
-        // ml={{ lg: "-5rem" }}
-        // _hover={{
-        //   bg: "red.500",
-        //   color: "white",
-        // }}
-        // p={{ base: "2rem", md: "3rem" }}
         display={"flex"}
         alignItems={"center"}
         justifyContent={{ base: "space-evenly", md: "space-between" }}
         gap={{ base: "20px", md: "0" }}
       >
-        <Text
-          w="40vw"
-          textAlign={"start"}
-          ml="15px"
-          fontSize={{ base: "1.5vmin", md: "2vmin" }}
-          letterSpacing={"12px"}
-          fontWeight={"600"}
-        >
-          WATCH COMPANY
-        </Text>
 
-        <Box display={"flex"} alignItems={"center"} gap="20px">
-          <Box w="15vw">
+
+        <Box
+          w={{ base: "20vw", md: "30vw", lg: '25vw' }}
+        
+          m={{ base: "0.5rem", md: "0.7rem", lg: "1rem 3rem 1rem 0rem" }}
+          p={{ base: "0rem", md: "0.7rem", lg: '1rem' }}
+        >
+          <img src={logo}
+            height="20%"
+            width="33%"
+            alt="logo"
+            ml="10px"
+            p="2rem"
+          />
+
+          <Text
+            w="30vw"
+            textAlign={"start"}
+            ml="5px"
+            mr="15px"
+            fontSize={{ base: "1.2vmin", md: "3vmin" }}
+            letterSpacing={"12px"}
+            fontWeight={"600"}
+            p="1rem 0rem 0rem 0rem"
+          >
+            WATCH COMPANY
+          </Text>
+          <br />
+          <Box w="35vw">
             <Text
+              ml="6px"
               fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
               letterSpacing={"2px"}
               fontWeight={"600"}
+              p={{ base: "0.3rem", md: "0.7rem", lg: '1rem' }}
             >
               About Us
+            </Text>
+            <Text
+              ml="6px"
+              fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+              letterSpacing={"2px"}
+              fontWeight={"600"}
+              p={{ base: "0.3rem", md: "0.7rem", lg: '0rem 1rem 1rem 1rem' }}
+            >
+              Contact Us
+            </Text>
+          </Box>
+        </Box>
+
+        <Box display={"flex"} alignItems={"center"} gap="20px">
+          <Box w="35vw">
+            <Text
+              mt="4rem"
+              fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+              letterSpacing={"2px"}
+              fontWeight={"600"}
+              p={{ base: "0.5rem", md: "0rem", lg: '1rem' }}
+            >
+              <LocationOnIcon style={{ fontSize: "15px" }} />
+              670, South Kasba, Navi Peth, Choupad, Maharashtra 413001
+            </Text>
+            <Text
+              fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+              letterSpacing={"2px"}
+
+              fontWeight={"600"}
+              p={{ base: "0.5rem", md: "0rem", lg: '0rem 1rem 1rem 1rem' }}
+            >
+              <LocationOnIcon style={{ fontSize: "15px" }} />
+              670, South Kasba, Navi Peth, Choupad, Maharashtra 413001
             </Text>
             <Text
               fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
               letterSpacing={"2px"}
               fontWeight={"600"}
+              p={{ base: "0.5rem", md: "0.7rem", lg: '0rem 1rem 1rem 1rem' }}
             >
-              Contact Us
+              <CallIcon style={{ fontSize: "15px" }} />
+              966568893452
+            </Text>
+            <Text
+              fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+              letterSpacing={"2px"}
+              fontWeight={"600"}
+              p={{ base: "0.5rem", md: "0.7rem", lg: '0rem 1rem 1rem 1rem' }}
+            >
+              <EmailIcon style={{ fontSize: "15px" }} />
+              Premjadhav@gmail.com
             </Text>
           </Box>
 
           <Box display={"flex"} flexDirection={"column"} gap="5px">
             <Box display={"flex"} gap="5px">
-              <CallIcon style={{ fontSize: "15px" }} />
               <Text
-                fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+                fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "2.4vmin" }}
                 letterSpacing={"2px"}
                 fontWeight={"600"}
               >
-                9665689342
+                About the company
+                <Text
+                  fontSize={{ base: "1.7vmin", md: "1.3vmin", lg: "1.7vmin" }}
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. A iure suscipit quod impedit, fugiat quasi laboriosam officiis
+                </Text>
+                <br />
+                <Text fontSize={{ base: '1.5vmin', md: '1.5vmin', lg: '1.8vmin' }} textAlign={{ base: 'center', md: 'center', lg: 'start' }}>Copyright © 2023 , All rights reserved. </Text>
+
               </Text>
             </Box>
-            <Box display={"flex"} gap="5px">
-              <EmailIcon style={{ fontSize: "15px" }} />
-              <Text
-                fontSize={{ base: "1.6vmin", md: "1.3vmin", lg: "1.7vmin" }}
-                letterSpacing={"2px"}
-                fontWeight={"600"}
-              >
-                Premjadhav@gmail.com
-              </Text>
-            </Box>
+
           </Box>
         </Box>
       </Box>
-        <Text fontSize={{base:'1.5vmin',md:'1.5vmin',lg:'1.8vmin'}} textAlign={{base:'center',md:'center',lg:'end'}}>Copyright © 2023 , All rights reserved. </Text>
     </Box>
   );
 }
